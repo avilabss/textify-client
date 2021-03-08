@@ -4,7 +4,7 @@ import { io } from "socket.io-client";
 import { store } from "../index";
 import { UPDATE_OUT_TEXT } from "../redux/actionTypes/outText";
 
-export const socket = io("https://22727ad8f8bf.ngrok.io", {
+export const socket = io("https://d5182fa0717a.ngrok.io", {
   transports: ["websocket"],
 });
 
