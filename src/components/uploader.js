@@ -1,6 +1,8 @@
 import React, { useState, useEffect, useContext } from "react";
 import { Button } from "@material-ui/core";
 
+import { store } from "../index";
+import { LOADING } from "../redux/actionTypes/activity";
 import { SocketContext } from "../socket";
 import { getB64 } from "../helpers";
 
@@ -11,6 +13,7 @@ const Uploader = () => {
   useEffect(() => {
     if (selectedFile) {
       const convertAndEmitForText = async () => {
+        store.dispatch({ type: LOADING });
         const b64String = await getB64(selectedFile);
         socket.emit("getText", b64String);
       };
@@ -29,7 +32,7 @@ const Uploader = () => {
         onChange={(e) => setSelectedFile(e.target.files[0])}
       />
       <label htmlFor="imageFile">
-        <Button variant="contained" color="primary" component="span">
+        <Button variant="contained" color="default" component="span">
           Upload
         </Button>
       </label>
