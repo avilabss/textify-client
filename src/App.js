@@ -26,7 +26,7 @@ const App = () => {
             style={{ padding: "2%" }}
           />
           <div className={classes.text}>
-            <Typography variant="h5">Textify Your Image ✨</Typography>
+            <Typography variant="h5">Textify Your Image ✌</Typography>
           </div>
           <div>
             <Activity />
