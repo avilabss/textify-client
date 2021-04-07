@@ -9,7 +9,7 @@ import {
   NOT_LOADING,
 } from "../redux/actionTypes/activity";
 
-export const socket = io("https://b18dbcf98b12.ngrok.io", {
+export const socket = io("https://58ad8ef7c258.ngrok.io", {
   transports: ["websocket"],
   upgrade: false,
 });
